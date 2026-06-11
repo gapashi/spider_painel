@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+
+    <title>spider-painel</title>
+  </head>
+  <body>
+    <div class="min-h-screen bg-slate-950 text-slate-100 p-6" data-theme="dark">
+  
+      <div class="navbar bg-error text-error-content rounded-box shadow-lg mb-8">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl font-black tracking-wider">🕷️ SPIDER-NET v1.0</a>
+        </div>
+        <div class="flex-none">
+          <div class="badge badge-outline border-white text-white font-bold animate-pulse">SISTEMA ATIVO</div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="card bg-slate-900 border border-red-600/30 shadow-xl">
+          <figure class="px-6 pt-6">
+            <img src="https://images.unsplash.com/photo-1604200213928-ba3cf4fc8436?auto=format&fit=crop&w=400&q=80" alt="Spiderman" class="rounded-xl h-48 w-full object-cover" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title text-red-500 font-bold">Peter Parker</h2>
+            <p class="text-sm text-slate-400">Protetor do Queens | Amigão da Vizinhança</p>
+            
+            <div class="stats bg-slate-950 shadow mt-4 w-full text-center">
+              <div class="stat p-2">
+                <div class="stat-title text-xs text-slate-400">Fluido de Teia</div>
+                <div class="stat-value text-sm text-info">82%</div>
+              </div>
+              <div class="stat p-2">
+                <div class="stat-title text-xs text-slate-400">Bateria Traje</div>
+                <div class="stat-value text-sm text-warning">45%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-slate-900 border border-slate-800 shadow-xl p-6 md:col-span-2">
+          <h3 class="text-xl font-bold text-red-400 mb-4 flex items-center gap-2">
+            🚨 Alertas de Crimes Recentes
+          </h3>
+          
+          <div class="space-y-4">
+            <div class="collapse collapse-arrow bg-slate-950 border border-slate-800">
+              <input type="radio" name="missoes" checked /> 
+              <div class="collapse-title text-md font-semibold text-error">
+                Assalto ao banco central (Duende Verde avistado)
+              </div>
+              <div class="collapse-content text-sm text-slate-400">
+                <p>O Duende Verde está atacando a principal agência do Queens. Desloque-se imediatamente.</p>
+                <button class="btn btn-error btn-xs mt-3">Iniciar Rastreamento</button>
+              </div>
+            </div>
+
+            <div class="collapse collapse-arrow bg-slate-950 border border-slate-800">
+              <input type="radio" name="missoes" /> 
+              <div class="collapse-title text-md font-semibold text-warning">
+                Roubo de tecnologia na Oscorp
+              </div>
+              <div class="collapse-content text-sm text-slate-400">
+                <p>Sensores detectaram invasão no laboratório químico principal. Possível atividade do Rhino.</p>
+                <button class="btn btn-warning btn-xs mt-3">Ver Câmeras</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

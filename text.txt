@@ -1,0 +1,293 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider-Net Dashboard</title>
+
+    <!-- Tailwind + DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <!--
+        min-h-screen = altura mínima de 100vh (100% da tela)
+        bg-slate-950 = fundo quase preto
+        text-slate-100 = texto cinza muito claro
+        p-6 = padding de 1.5rem
+        data-theme="dark" = ativa tema escuro do DaisyUI
+    -->
+    <div class="min-h-screen bg-slate-950 text-slate-100 p-6" data-theme="dark">
+
+        <!-- ================= NAVBAR ================= -->
+
+        <!--
+            navbar = componente DaisyUI
+            bg-error = fundo vermelho do tema
+            text-error-content = cor ideal para textos sobre fundo vermelho
+            rounded-box = bordas arredondadas
+            shadow-lg = sombra grande
+            mb-8 = margem inferior de 2rem
+        -->
+        <div class="navbar bg-error text-error-content rounded-box shadow-lg mb-8">
+
+            <!--
+                flex-1 = ocupa todo espaço disponível
+            -->
+            <div class="flex-1">
+
+                <!--
+                    btn = estilo de botão DaisyUI
+                    btn-ghost = botão transparente
+                    text-xl = texto grande (1.25rem)
+                    font-black = peso 900
+                    tracking-wider = aumenta espaçamento entre letras
+                -->
+                <a class="btn btn-ghost text-xl font-black tracking-wider">
+                    🕷️ SPIDER-NET v1.0
+                </a>
+            </div>
+
+            <!--
+                flex-none = não cresce dentro do flexbox
+            -->
+            <div class="flex-none">
+
+                <!--
+                    badge = selo DaisyUI
+                    badge-outline = somente borda
+                    border-white = borda branca
+                    text-white = texto branco
+                    font-bold = negrito
+                    animate-pulse = animação pulsante
+                -->
+                <div class="badge badge-outline border-white text-white font-bold animate-pulse">
+                    SISTEMA ATIVO
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= GRID PRINCIPAL ================= -->
+
+        <!--
+            grid = ativa CSS Grid
+            grid-cols-1 = 1 coluna em telas pequenas
+            md:grid-cols-3 = 3 colunas em telas médias+
+            gap-6 = espaço entre elementos
+        -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- ================= CARD DO HOMEM-ARANHA ================= -->
+
+            <!--
+                card = componente card DaisyUI
+                bg-slate-900 = fundo escuro
+                border = ativa borda
+                border-red-600/30 = vermelho com 30% de opacidade
+                shadow-xl = sombra grande
+            -->
+            <div class="card bg-slate-900 border border-red-600/30 shadow-xl">
+
+                <!--
+                    px-6 = padding horizontal
+                    pt-6 = padding superior
+                -->
+                <figure class="px-6 pt-6">
+
+                    <!--
+                        rounded-xl = bordas arredondadas
+                        h-48 = altura fixa (12rem)
+                        w-full = largura total
+                        object-cover = preenche sem distorcer
+                    -->
+                    <img
+                        src="https://images.unsplash.com/photo-1604200213928-ba3cf4fc8436?auto=format&fit=crop&w=400&q=80"
+                        alt="Spiderman"
+                        class="rounded-xl h-48 w-full object-cover"
+                    />
+                </figure>
+
+                <!--
+                    card-body = corpo do card
+                    items-center = centraliza itens
+                    text-center = centraliza texto
+                -->
+                <div class="card-body items-center text-center">
+
+                    <!--
+                        card-title = título padrão DaisyUI
+                        text-red-500 = vermelho
+                        font-bold = negrito
+                    -->
+                    <h2 class="card-title text-red-500 font-bold">
+                        Peter Parker
+                    </h2>
+
+                    <!--
+                        text-sm = texto pequeno
+                        text-slate-400 = cinza médio
+                    -->
+                    <p class="text-sm text-slate-400">
+                        Protetor do Queens | Amigão da Vizinhança
+                    </p>
+
+                    <!--
+                        stats = componente de estatísticas
+                        bg-slate-950 = fundo escuro
+                        shadow = sombra padrão
+                        mt-4 = margem superior
+                        w-full = largura total
+                        text-center = centraliza texto
+                    -->
+                    <div class="stats bg-slate-950 shadow mt-4 w-full text-center">
+
+                        <!--
+                            stat = item de estatística
+                            p-2 = padding pequeno
+                        -->
+                        <div class="stat p-2">
+
+                            <!--
+                                text-xs = texto muito pequeno
+                                text-slate-400 = cinza
+                            -->
+                            <div class="stat-title text-xs text-slate-400">
+                                Fluido de Teia
+                            </div>
+
+                            <!--
+                                stat-value = valor destacado
+                                text-sm = tamanho pequeno
+                                text-info = azul do tema
+                            -->
+                            <div class="stat-value text-sm text-info">
+                                82%
+                            </div>
+                        </div>
+
+                        <div class="stat p-2">
+                            <div class="stat-title text-xs text-slate-400">
+                                Bateria Traje
+                            </div>
+
+                            <!--
+                                text-warning = amarelo do tema
+                            -->
+                            <div class="stat-value text-sm text-warning">
+                                45%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= CARD DE ALERTAS ================= -->
+
+            <!--
+                p-6 = padding interno
+                md:col-span-2 = ocupa 2 colunas em telas médias+
+            -->
+            <div class="card bg-slate-900 border border-slate-800 shadow-xl p-6 md:col-span-2">
+
+                <!--
+                    text-xl = texto grande
+                    font-bold = negrito
+                    text-red-400 = vermelho claro
+                    mb-4 = margem inferior
+                    flex = display flex
+                    items-center = alinhamento vertical
+                    gap-2 = espaço entre emoji e texto
+                -->
+                <h3 class="text-xl font-bold text-red-400 mb-4 flex items-center gap-2">
+                    🚨 Alertas de Crimes Recentes
+                </h3>
+
+                <!--
+                    space-y-4 = adiciona espaço vertical entre filhos
+                -->
+                <div class="space-y-4">
+
+                    <!-- ================= ALERTA 1 ================= -->
+
+                    <!--
+                        collapse = accordion DaisyUI
+                        collapse-arrow = mostra seta
+                        bg-slate-950 = fundo escuro
+                        border = borda
+                        border-slate-800 = cor da borda
+                    -->
+                    <div class="collapse collapse-arrow bg-slate-950 border border-slate-800">
+
+                        <!--
+                            checked = começa aberto
+                        -->
+                        <input type="radio" name="missoes" checked />
+
+                        <!--
+                            text-md = tamanho médio
+                            font-semibold = peso 600
+                            text-error = vermelho do tema
+                        -->
+                        <div class="collapse-title text-md font-semibold text-error">
+                            Assalto ao banco central (Duende Verde avistado)
+                        </div>
+
+                        <!--
+                            collapse-content = conteúdo expandido
+                            text-sm = texto pequeno
+                            text-slate-400 = cinza
+                        -->
+                        <div class="collapse-content text-sm text-slate-400">
+
+                            <p>
+                                O Duende Verde está atacando a principal agência
+                                do Queens. Desloque-se imediatamente.
+                            </p>
+
+                            <!--
+                                btn-error = vermelho
+                                btn-xs = botão pequeno
+                                mt-3 = margem superior
+                            -->
+                            <button class="btn btn-error btn-xs mt-3">
+                                Iniciar Rastreamento
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ================= ALERTA 2 ================= -->
+
+                    <div class="collapse collapse-arrow bg-slate-950 border border-slate-800">
+
+                        <input type="radio" name="missoes" />
+
+                        <div class="collapse-title text-md font-semibold text-warning">
+                            Roubo de tecnologia na Oscorp
+                        </div>
+
+                        <div class="collapse-content text-sm text-slate-400">
+
+                            <p>
+                                Sensores detectaram invasão no laboratório químico
+                                principal. Possível atividade do Rhino.
+                            </p>
+
+                            <button class="btn btn-warning btn-xs mt-3">
+                                Ver Câmeras
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+```
