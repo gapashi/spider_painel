@@ -40,7 +40,7 @@ spider-net-dashboard/
 Clone o repositório:
 
 ```bash
-git clone https://github.com/gapashi/spider-painel.git
+git clone https://github.com/gapashi/spider_painel
 ```
 
 Acesse a pasta do projeto:
